@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Supplies Shop</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html"><img class="img-fluid" src="img/logo.svg" alt="cats&dogs"></a>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="cart">
+                    <a href="cart.html">
+                        <img src="img/shopping-cart.svg" alt="Cart">
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <form id="search-form">
+            <input type="text" id="search" placeholder="Search products">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    </header>
+
+    <main>
+        <section id="banner__hero">
+            <picture>
+                <source srcset="/img/banner-mobile.png" media="(max-width: 768px)">
+                <img src="/img/banner.png" alt="Pet Supplies Banner">
+            </picture>
+        </section>
+        <section id="popular-products">
+            <div class="container">
+
+                
+            <h2>Popular Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="/img/dog-toy.webp" alt="Dog Toy">
+                    <h3>Dog Toy</h3>
+                    <p>Price: $40</p>
+                    <button class="add-to-cart" data-name="Dog Toy" data-price="$40">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/img/dog-food.webp" alt="Dog Food">
+                    <h3>Dog Food</h3>
+                    <p>Price: $40</p>
+                    <button class="add-to-cart" data-name="Dog Food" data-price="$40">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/img/7f18bd32-043a-4147-964b-00050d2f4620.webp" alt="Dog leash">
+                    <h3>Dog leash</h3>
+                    <p>Price: $40</p>
+                    <button class="add-to-cart" data-name="Dog leash" data-price="$40">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/img/cat-food.webp" alt="Cat Food">
+                    <h3>Cat Food</h3>
+                    <p>Price: $25</p>
+                    <button class="add-to-cart" data-name="Cat Food" data-price="$25">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="promo">
+            <div class="container">
+            <h2>Special Offers</h2>
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Discount</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Dog Food</td>
+                    <td>20%</td>
+                    <td>$30</td>
+                </tr>
+                <tr>
+                    <td>Cat Toy Set</td>
+                    <td>15%</td>
+                    <td>$15</td>
+                </tr>
+            </table>
+            </div>
+        </section>
+
+        <section id="discounted-products">
+            <div class="container">
+            <h2>Discounted Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="/img/scratching.webp" alt="Scratching posts">
+                    <h3>Cat Tree</h3>
+                    <p>Was: $80 Now: $60</p>
+                    <button class="add-to-cart" data-name="Cat Tree" data-price="$60">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/img/dog-bed.webp" alt="Dog bed">
+                    <h3>Dog bed</h3>
+                    <p>Was: $70 Now: $50</p>
+                    <button class="add-to-cart" data-name="Dog bed" data-price="$50">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/img/dog-toy.webp" alt="Dog toy">
+                    <h3>Dog toy</h3>
+                    <p>Was: $40 Now: $25</p>
+                    <button class="add-to-cart" data-name="Dog toy" data-price="$25">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/img/cat-toy.webp" alt="Cat toy">
+                    <h3>Cat toy</h3>
+                    <p>Was: $50 Now: $30</p>
+                    <button class="add-to-cart" data-name="Cat toy" data-price="$30">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <div class="container">
+                <h2>Customer Reviews</h2>
+                <div class="reviews-grid">
+                
+                </div>
+                <button id="load-more" class="load-more">Load more</button>
+                <p id="no-more-reviews" class="no-more-reviews" style="display: none;">No more reviews available.</p>
+                </div>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pet Supplies Shop</p>
+    </footer> 
+    <div id="cart-alert">Product added to cart!</div>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
