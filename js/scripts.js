@@ -65,4 +65,18 @@ document.addEventListener('DOMContentLoaded', () => {
         loadMoreReviews(4);
     });
 
+    document.getElementById('subscribe-form').addEventListener('submit', function(event) {
+        const emailInput = document.getElementById('email');
+        const errorMessage = document.getElementById('error-message');
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(emailInput.value)) {
+            event.preventDefault(); 
+            errorMessage.style.display = 'block'; 
+        } else {
+            errorMessage.style.display = 'none'; 
+        }
+    }); 
+
 });
