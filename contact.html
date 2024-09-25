@@ -3,57 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Pet Supplies Shop</title>
+    <title>Pet Supplies Shop</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <div class="navbar">
+            <a href="index.html"><img class="img-fluid" src="img/logo.svg" alt="cats&dogs"></a>
+        
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="catalog.html">Catalog</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="cart">
+                    <a href="cart.html">
+                        <img src="img/shopping-cart.svg" alt="Cart">
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
             </ul>
         </nav>
-        <h1>Contact Us</h1>
+        <form id="search-form">
+            <input type="text" id="search" placeholder="Search products">
+            <button type="submit">Search</button>
+        </form>
+    </div>
     </header>
-
     <main>
-        <section id="contact-info">
-            <h2>Our Contact Information</h2>
-            <table>
-                <tr>
-                    <th>Type</th>
-                    <th>Details</th>
-                </tr>
-                <tr>
-                    <td>Phone</td>
-                    <td>(123) 456-7890</td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td>info@petsuppliesshop.com</td>
-                </tr>
-                <tr>
-                    <td>Address</td>
-                    <td>1234 Market St, City, Country</td>
-                </tr>
-            </table>
-        </section>
-
-        <section id="contact-form">
-            <h2>Send Us a Message</h2>
-            <form id="message-form">
-                <input type="text" id="name" placeholder="Your Name">
-                <input type="email" id="email" placeholder="Your Email">
-                <textarea id="message" placeholder="Your Message"></textarea>
-                <button type="submit">Send</button>
-            </form>
+        <section id="contact-section">
+            <div class="container-contact">
+                <h2>Contact Us</h2>
+                <p>Please fill out the form below to get in touch with us.</p>
+                <form id="contactForm" action="submit_form.html">
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Full Name"
+                        required
+                    />
+                    <div class="error-message" id="nameError">Please enter your full name.</div>
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Email Address"
+                        required
+                    />
+                    <div class="error-message" id="emailError">Please enter a valid email address.</div>
+                    <input
+                        type="tel"
+                        id="tel"
+                        name="tel"
+                        placeholder="Phone number"
+                        required
+                    />
+                    <div class="error-message" id="telError">Please enter a valid phone number.</div>
+                    
+                    <select id="refer" name="refer" required>
+                        <option value="" disabled selected>
+                            Select a Topic
+                        </option>
+                        <option value="order-status">Order Status</option>
+                        <option value="shipping">Shipping Information</option>
+                        <option value="returns">Returns & Exchanges</option>
+                        <option value="product-inquiry">Product Inquiry</option>
+                        <option value="technical-support">Technical Support</option>
+                        <option value="other">Other</option>
+                    </select>
+    
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Your Message"
+                        rows="5"
+                        required
+                    ></textarea>
+                    <div class="error-message" id="messageError">Please enter your message.</div>
+    
+                    <label class="terms-label">
+                        <input type="checkbox" id="terms" name="terms" required />
+                        I agree to the terms and conditions
+                    </label>
+                    <div class="error-message" id="termsError" style="margin-top:15px">You must agree to the terms and conditions.</div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Our Office</h3>
+                    <p>123 Main Street<br>Anytown, USA<br>Phone: (555) 555-5555</p>
+                    <p>Email: contact@company.com</p>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-
-    <footer>
+   <footer>
+        <div class="footer-content">
+            <div class="footer-nav">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-subscribe">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form id="subscribe-form">
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <div class="error-message" style="display:none;" style="padding: 5px; color:red;" id="error-message">Please enter a valid email address.</div>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.youtube.com" target="_blank"><img src="/img/icons8-youtube-48.png" alt="YouTube"></a></li>
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="/img/icons8-facebook-48.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank"><img src="/img/icons8-instagram-48.png" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </div>
         <p>&copy; 2024 Pet Supplies Shop</p>
     </footer>
+    <div id="cart-alert">Product added to cart!</div>
+    <script defer src="/js/validation.js"></script>
 </body>
 </html>
