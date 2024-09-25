@@ -505,6 +505,11 @@ footer p {
     .product-card {
         width: 40%; 
     }
+    #cart-alert {
+        top: 100px;
+        right: 20px;
+       
+    }
 }
 @media (max-width: 768px) {
     .product-card {
