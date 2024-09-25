@@ -131,17 +131,6 @@ h1 {
     cursor: pointer;
     margin-top: 10px;
 }
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-   
-    
-   
-}
-
 .img-fluid{
     max-width: 100%;
     height: auto;
@@ -232,7 +221,75 @@ footer {
     margin-top: 20px;
     color: #666;
 }
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
 
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-nav,
+.footer-subscribe,
+.footer-social {
+    flex: 1;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.footer-nav ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav ul li,
+.footer-social ul li {
+    margin: 10px 0;
+}
+
+.footer-nav ul li a,
+.footer-social ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-social ul li a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+#subscribe-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#subscribe-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--emphasize);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #bbb;
+}
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
